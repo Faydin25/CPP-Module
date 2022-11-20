@@ -21,7 +21,6 @@ class Contact
         std::string getPhoneNumber(void);
         std::string getYourSecret(void);
     private:
-        int         id;  
         std::string _firstName;
         std::string _lastName;
         std::string _nickName;
