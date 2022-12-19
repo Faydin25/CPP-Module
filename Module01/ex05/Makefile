@@ -1,11 +1,11 @@
-SRCS			= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp 
+SRCS			= $(wildcard *.cpp)
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98
 
-NAME			= Fight
+NAME			= main
 
 all:			$(NAME)
 
@@ -20,11 +20,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-test:			$(NAME)
-				./megaphone "shhhhh... I think the students are asleep..."
-				./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
-				./megaphone
-
 run: $(NAME)
 	./$(NAME)
+
 .PHONY:			all clean fclean re test

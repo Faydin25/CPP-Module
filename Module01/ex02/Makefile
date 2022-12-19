@@ -3,7 +3,7 @@ OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I.
+CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98
 
 NAME			= HiThisIsBraiN
 

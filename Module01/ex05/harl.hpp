@@ -1,5 +1,4 @@
-#ifndef HARL_HPP
-# define HARL_HPP
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -14,5 +13,3 @@ class Harl
         void complain(std::string level);
     private:
 };
-
-#endif

@@ -1,4 +1,4 @@
-#include "harl.hpp"
+#include "Harl.hpp"
 
 void Harl::debug()
 {
@@ -20,7 +20,7 @@ void Harl::error()
     std::cout << "Error" << std::endl;
 }
 
-void Harl::complain(std::string _level)
+void Harl::complain(std::string _level)//fonksiyona yolla input al switch case uygula.
 {
     int level = stoi(_level);
     switch (level)
