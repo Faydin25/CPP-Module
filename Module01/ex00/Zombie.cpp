@@ -17,5 +17,5 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie()
 {
-    std::cout << this->name << " silindi." << std::endl;
+    std::cout << this->name << " REMOVED." << std::endl;
 };

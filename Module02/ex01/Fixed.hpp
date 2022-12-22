@@ -11,7 +11,9 @@ class Fixed
         Fixed(const float nbr);
         Fixed(const Fixed &other);
         ~Fixed();
-        Fixed &operator=(const Fixed &other);
+
+        Fixed& operator=(const Fixed &other);
+
         void setRawBits(const int rawBits);
         int getRawBits() const;
         int toInt() const;
@@ -20,5 +22,7 @@ class Fixed
         static const int _nFracBits = 8;
         int _rawBits;
 };
+
+std::ostream& operator<<(std::ostream& o, Fixed& Fixed);
 
 #endif
