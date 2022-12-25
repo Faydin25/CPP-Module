@@ -5,7 +5,7 @@ CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I.-std=c++98
 
-NAME			= Zombie
+NAME			= Moarbrainz!
 
 all:			$(NAME)
 
@@ -19,10 +19,5 @@ fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
-
-test:			$(NAME)
-				./megaphone "shhhhh... I think the students are asleep..."
-				./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
-				./megaphone
 
 .PHONY:			all clean fclean re test

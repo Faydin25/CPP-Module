@@ -24,7 +24,7 @@ void    Contact::setYourSecret(std::string str)
 {
     _yourSecret = str;
 }
-//////////////////////////////////////////////
+
 std::string Contact::getFirstName(void)
 {
     return _firstName;

@@ -1,11 +1,11 @@
-SRCS			= $(wildcard *.cpp)
+SRCS			= Harl.cpp main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98
 
-NAME			= main
+NAME			= Harl
 
 all:			$(NAME)
 

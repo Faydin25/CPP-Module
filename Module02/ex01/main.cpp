@@ -1,4 +1,4 @@
-#include "Fixed.hpp"
+#include "Fixed.hpp"//HATALI!!!!!!!!!!!!!
 
 int main( void )
 {
