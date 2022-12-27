@@ -1,4 +1,4 @@
-#pragma once
+#pragma once//
 
 #include <iostream>
 
@@ -14,5 +14,3 @@ public:
 	virtual std::string getType() const;
 	virtual void makeSound() const = 0;
 };
-
-

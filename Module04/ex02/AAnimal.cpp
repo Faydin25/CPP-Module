@@ -22,11 +22,11 @@ AAnimal &AAnimal::operator=(const AAnimal &var) {
 AAnimal::~AAnimal() {
 	std::cout << "Deconstructor - AAnimal - Called" << std::endl;
 }
-
+/*
 void AAnimal::makeSound() const{
 	std::cout << "Default AAnimal Song : UwU" << std::endl;
 }
-
+*/
 std::string AAnimal::getType() const{
 	return (this->type);
 }
