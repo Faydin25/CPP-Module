@@ -112,7 +112,27 @@ std::vector<int> ft_process(std::string str)
 
 void ft_go_algorithm(std::vector<std::string> mark, std::vector<int> nbr)
 {
+	int	int_nbr = 1;
+	int int_mark;
 
+	std::vector<int>::iterator x;
+	std::vector<std::string>::iterator y;
+	x = nbr.end();
+	y = mark.end();
+	while(nbr[int_nbr] && nbr[int_nbr] != *(x))
+	{
+		int_mark = int_nbr - 1;
+		if (mark[int_mark] != *(y) && mark[int_mark] == "*")
+			nbr[int_nbr] = nbr[int_nbr - 1] * nbr[int_nbr];
+		else if (mark[int_mark] != *(y) && mark[int_mark] == "/")
+			nbr[int_nbr] = nbr[int_nbr - 1] / nbr[int_nbr];
+		else if (mark[int_mark] != *(y) && mark[int_mark] == "-")
+			nbr[int_nbr] = nbr[int_nbr - 1] - nbr[int_nbr];
+		else if (mark[int_mark] != *(y) && mark[int_mark] == "+")
+			nbr[int_nbr] = nbr[int_nbr - 1] + nbr[int_nbr];
+		int_nbr++;
+	}
+	std::cout << "Result: " << nbr[int_nbr - 1] << std::endl;
 }
 
 void	ft_routine(Data *data, std::string str)
