@@ -1,4 +1,9 @@
-#include "PmergeMe.h"
+#include "BitcoinExchange.h"
+
+Data::m_type Data::getCsv()
+{
+	return this->csv;
+};
 
 void Data::setFile(std::string _file)
 {
@@ -10,6 +15,8 @@ void Data::setFile(std::string _file)
 		exit(EXIT_FAILURE);
 	}
 	std::string line;
+	m_type::iterator  it;
+	it = this->csv.begin();
 	while (std::getline(file, line))
 	{
 		if (i == 0)
@@ -36,7 +43,12 @@ void Data::setFile(std::string _file)
 		}
 		this->file_double.push_back(value);
 		this->file_date.push_back(date);
-		std::cout << this->file_date.back() << "=> " << this->file_double.front() << " = " << std::endl;
+		std::cout << this->file_date.back() << "=> " << this->file_double.front() << " = ";
+		m_type::iterator it2 = csv.upper_bound(date);
+		if(it2 != csv.end())
+			std::cout << this->file_double.front() * it2->second << std::endl;
+		if (it != this->csv.end())
+			it++;
 	}
 	file.close();
 }
