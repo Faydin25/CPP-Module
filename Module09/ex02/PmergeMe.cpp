@@ -51,3 +51,24 @@ void Data::getShort()
 {
 	this->mylist.sort();
 }
+
+void Data::ft_control()
+{
+	std::list<int>::iterator it = this->mylist.begin();
+	while (it != this->mylist.end()) {
+		if (*it < 0)
+			ft_error("Error, Wrong Input!");
+		it++;
+	}
+}
+
+void Data::ft_control2()
+{
+	std::multiset<int>::iterator it = this->multiset.begin();
+	while (it != this->multiset.end())
+	{
+		if (*it < 0)
+			ft_error("Error, Wrong Input!");
+		it++;
+	}
+}

@@ -21,7 +21,14 @@ class Data
 		void getPrint();
 		void getPrint2();
 		void getShort();
-	private:
+		void ft_control2();
+		void ft_control();
+		void ft_error(std::string str)
+		{
+			std::cerr << str << std::endl;
+			exit(EXIT_FAILURE);
+		}
+private:
 		std::list<int> mylist;
 		std::multiset<int> multiset;
 		clock_t list_start;
