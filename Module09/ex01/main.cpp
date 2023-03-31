@@ -137,6 +137,7 @@ void ft_go_algorithm(std::vector<std::string> mark, std::vector<int> nbr)
 
 void	ft_routine(Data *data, std::string str)
 {
+	(void)data;
 	ft_control(str);
 	std::vector<int> nbr = ft_process(str);
 	std::vector<std::string> mark = ft_process2(str);

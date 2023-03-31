@@ -13,7 +13,6 @@ void ft_routine(char **av)
 	while (av[++t])
 		std::cout << av[t] << " ";
 	std::cout << std::endl;
-	///////////////////////////////////////////////////////////
 	clock_t end = clock();
 	double diff = double(end - data.getClock()) / (CLOCKS_PER_SEC/1000000);
 	long long nbr = diff;
@@ -32,7 +31,6 @@ void ft_routine2(char **av)
 	while(av[++i])
 		data2.setList(av[i]);
 	data2.ft_control2();
-	///////////////////////////////////////////////////////////
 	clock_t end = clock();
 	double diff = double(end - data2.getClock2()) / (CLOCKS_PER_SEC/1000000);
 	long long nbr = diff;
