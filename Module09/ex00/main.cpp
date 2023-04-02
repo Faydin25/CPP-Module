@@ -2,8 +2,13 @@
 
 int main(int ac, char **av)
 {
-	(void)ac;
-	Data data;
-	data.setFile(av[1]);
+	if (ac == 2) {
+		Data data;
+		data.setFile(av[1]);
+	}
+	else {
+		std::cout << "Error, Wrong Argumant." << std::endl;
+		return 1;
+	}
 	return 0;
 }

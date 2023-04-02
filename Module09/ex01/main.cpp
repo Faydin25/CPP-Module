@@ -65,7 +65,7 @@ void	ft_control2(std::vector<int> nbr, std::vector<std::string> mark)
 	while(mark[++i] != *(x))
 		str_count++;
 	if (nbr_count != str_count)
-		ft_error("Wrong Input!!!");
+		ft_error("->Wrong Input!!!");
 	i = -1;
 	while(nbr[++i] != *(y))
 		if (nbr[i] > 9 || nbr[i] < 0)
