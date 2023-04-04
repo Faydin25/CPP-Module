@@ -18,7 +18,6 @@ void ft_routine(char **av)
 	long long nbr = diff;
 	std::chrono::milliseconds time(nbr);
 	data.getShort();
-	data.getPrint();
 	std::cout << "Time to process a range of elements with std::list : ";
 	std::cout << time.count() << " us" << std::endl;
 }

@@ -68,6 +68,7 @@ void ft_control2(const std::vector<int> &nbr, const std::vector<std::string> &ma
 		count++;
 	if (count >= 10)
 		ft_error("Error, So More Number!");
+
 }
 
 std::vector<std::string> ft_process2(std::string str) {

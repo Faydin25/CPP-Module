@@ -34,20 +34,22 @@ clock_t Data::getClock2()
 	return this->multiset_start;
 }
 
-void Data::getPrint()
-{
-	std::list<int>::iterator it = this->mylist.begin();
-	std::cout << "After: ";
-	while (it != this->mylist.end()) {
-		std::cout << *it << " ";//
-		it++;
-	}
-	std::cout << std::endl;
-}
 
 void Data::getShort()
 {
-	this->mylist.sort() ;
+	std::list<int> tmp;
+	int i = this->mylist.size();
+	while (i > 0)
+	{
+		std::list<int>::iterator it = std::min_element(this->mylist.begin(), this->mylist.end());
+		tmp.push_back(*it);
+		this->mylist.erase(std::min_element(this->mylist.begin(), this->mylist.end()));
+		i--;
+	}
+	std::cout << "After: ";
+	for (std::list<int>::iterator it = tmp.begin(); it != tmp.end(); it++)
+		std::cout << *it << " ";
+	std::cout << std::endl;
 }
 
 void Data::ft_control()

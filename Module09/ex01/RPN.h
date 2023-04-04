@@ -10,7 +10,6 @@ class Data {
 	public:
 		Data();
 		~Data();
-		//int ft_control(Data data, int nbr);
 	private:
 		;
 };
