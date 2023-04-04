@@ -59,10 +59,15 @@ void ft_control2(const std::vector<int> &nbr, const std::vector<std::string> &ma
 
 	for (std::vector<int>::const_iterator it = nbr.begin(); it != nbr.end(); ++it) {
 		int num = *it;
-		if (num > 9 || num < 0) {
-			ft_error("Error: Number So Big.");
+		if (num < 0) {
+			ft_error("Error");
 		}
 	}
+	int count = 0;
+	for (std::vector<int>::const_iterator it = nbr.begin(); it != nbr.end(); ++it)
+		count++;
+	if (count >= 10)
+		ft_error("Error, So More Number!");
 }
 
 std::vector<std::string> ft_process2(std::string str) {

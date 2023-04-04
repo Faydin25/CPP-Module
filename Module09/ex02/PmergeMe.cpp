@@ -17,13 +17,11 @@ void Data::setList2(std::string nbr)
 void Data::setClock()
 {
 	this->list_start = clock();
-	//std::cout << "start:  " << this->list_start << std::endl;
 }
 
 void Data::setClock2()
 {
 	this->multiset_start = clock();
-	//std::cout << "start:  " << this->list_start << std::endl;
 }
 
 clock_t Data::getClock()
@@ -49,7 +47,7 @@ void Data::getPrint()
 
 void Data::getShort()
 {
-	this->mylist.sort();
+	this->mylist.sort() ;
 }
 
 void Data::ft_control()

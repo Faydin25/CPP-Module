@@ -13,6 +13,8 @@ class Data
 		Data();
 		~Data();
 		void	setFile(std::string file);
+		bool isDateValid(int day, int month, int year);
+		bool ft_check(std::string date);
 		m_type getCsv();
 	private:
 	m_type csv;
