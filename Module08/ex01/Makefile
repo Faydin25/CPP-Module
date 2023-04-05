@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = mutantstack
 
 SRCS =	$(wildcard *.cpp)
 
@@ -19,7 +19,7 @@ clean:
 	@$(RM)  $(OBJS)
 
 fclean: clean
-	@$(RM) $(NAME) *_shrubbery
+	@$(RM) $(NAME)
 
 re: fclean all
 

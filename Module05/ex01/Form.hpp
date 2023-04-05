@@ -10,7 +10,7 @@ class Form
     public:
         Form();
         ~Form();
-        Form(std::string name, int execute, int required);
+        Form(std::string name, int required);
         void beSigned(const Bureaucrat &var) const;
         Form& operator=(const Form &var);
     class GradeTooHighException: public std::exception
@@ -29,7 +29,7 @@ class GradeTooLowException: public std::exception
 };
     private:
         const std::string name;
-        const int execute;
+        //const int execute;
         const int required;
         mutable bool isSigned;
 };
