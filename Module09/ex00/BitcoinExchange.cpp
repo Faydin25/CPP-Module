@@ -1,4 +1,4 @@
-#include "BitcoinExchange.h"
+#include "BitcoinExchange.hpp"
 
 Data::m_type Data::getCsv()
 {

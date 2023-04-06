@@ -1,4 +1,4 @@
-#include "RPN.h"
+#include "RPN.hpp"
 
 void ft_error(std::string error) {
 	std::cout << error << std::endl;
@@ -54,7 +54,7 @@ void ft_control2(const std::vector<int> &nbr, const std::vector<std::string> &ma
 	int str_count = mark.size();
 
 	if (nbr_count != str_count + 1) {
-		ft_error("->Wrong Input!!!");
+		ft_error("->Wrong Input!!!");//
 	}
 
 	for (std::vector<int>::const_iterator it = nbr.begin(); it != nbr.end(); ++it) {
@@ -63,12 +63,6 @@ void ft_control2(const std::vector<int> &nbr, const std::vector<std::string> &ma
 			ft_error("Error");
 		}
 	}
-	int count = 0;
-	for (std::vector<int>::const_iterator it = nbr.begin(); it != nbr.end(); ++it)
-		count++;
-	if (count >= 10)
-		ft_error("Error, So More Number!");
-
 }
 
 std::vector<std::string> ft_process2(std::string str) {
@@ -99,7 +93,11 @@ std::vector<int> ft_process(std::string str) {
 	if (nbr.empty()) {
 		ft_error("Wrong Input!!!!!!");
 	}
-
+	for (std::vector<int>::iterator it = nbr.begin(); it != nbr.end(); it++)
+	{
+		if (*it > 10 || *it < 0)
+			ft_error("Error, Number So Big/Small");
+	}
 	return nbr;
 }
 
